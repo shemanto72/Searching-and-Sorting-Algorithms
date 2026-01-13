@@ -26,7 +26,13 @@ def searching():
         else:
             print(f'The index number of {target} is: {result}')
     elif chosen == "2":
-        pass
+        nums = list(map(int, input("***************************** \nYou have choose binary search, first enter the number list: ").split()))
+        target = int(input("Enter The targated value: "))
+        result = linear_search(nums , target)
+        if result == -1:
+            print("Target not found!")
+        else:
+            print(f'The index number of {target} is : {result}')
     else:
         print("Invalid Choise")
 
@@ -56,4 +62,42 @@ def binary_search(nums, target):
             top = mid - 1
     return -1
 
+def linear_search(nums , target):
+    for i in range(len(nums)):
+        if nums[i] == target:
+            return i
+    return -1
+
+
+
+
 main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
